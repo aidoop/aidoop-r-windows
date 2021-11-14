@@ -1,0 +1,46 @@
+{
+  "name": "@things-factory/operato-fnb",
+  "version": "3.7.0",
+  "main": "dist-server/index.js",
+  "browser": "client/index.js",
+  "things-factory": true,
+  "license": "MIT",
+  "author": "heartyoh",
+  "description": "Operato Food &amp; Beverage Platform",
+  "publishConfig": {
+    "access": "public",
+    "@things-factory:registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hatiolab/things-factory.git",
+    "directory": "packages/operato-fnb"
+  },
+  "scripts": {
+    "serve": "things-factory operato-fnb",
+    "serve:dev": "npm run build:server && things-factory-dev operato-fnb",
+    "build": "tsc --p tsconfig.json",
+    "build:client": "npm run clean:client && webpack --config node_modules/@things-factory/builder/webpack.config.js",
+    "build:server": "npm run clean:server && tsc",
+    "clean:server": "rm -rf dist-server",
+    "clean:client": "rm -rf dist-client",
+    "clean": "npm run clean:server && npm run clean:client",
+    "migration": "npm run build:server && things-factory-migration",
+    "migration:privileges": "npm run build:server && things-factory-migration-privileges",
+    "migration:create": "node node_modules/typeorm/cli.js migration:create -d ./server/migrations",
+    "migration:generate": "node node_modules/typeorm/cli.js migration:generate",
+    "migration:run": "node node_modules/typeorm/cli.js migration:run",
+    "migration:revert": "node node_modules/typeorm/cli.js migration:revert",
+    "stop:dev": "kill $(lsof -t -i:3000,3001)",
+    "stop": "things-factory-stop operato-fnb",
+    "docker": "things-factory-dockerize hatiolab/operato-fnb:latest",
+    "docker:run": "docker run -it -p 4000:3000 hatiolab/operato-fnb:latest"
+  },
+  "dependencies": {
+    "@aidoop/aidoop-r": "^3.7.0",
+    "@things-factory/notification": "^3.7.0"
+  },
+  "devDependencies": {
+    "@things-factory/builder": "^3.7.0"
+  }
+}
