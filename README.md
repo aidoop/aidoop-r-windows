@@ -1,28 +1,33 @@
-## Build
+# operato-fnb
+Operato F&B brand project for windows 
 
-```
-# very first time, add base application from things-factory (ie. operato-board)
-$ yarn add @things-factory/operato-board
-```
+## Command Guide
 
-```
-# install node_modules
-$ yarn install
-# data migration in development mode
-$ yarn run migration --mode=development
-# run application (@things-factory/operato-fnb) in development mode
-$ DEBUG=things-factory:* yarn run serve:dev
+### Application Run
+
+```cmd
+start.bat
 ```
 
+### Database Migration
+
+```cmd
+migrate.bat
 ```
-# data migration in production mode
-$ yarn run migration --mode=production
-# build application (server module)
-$ yarn build
-# build application (client module)
-$ yarn build:client
-# run application (@things-factory/operato-fnb) in production mode
-$ yarn run serve
+
+### Dependency Module Upgrade
+```cmd
+upgrade.bat
+```
+
+### Service Registration
+on x64 environment
+```cmd
+nssm_install_x64.bat
+```
+on x86 environment
+```cmd
+nssm_install_x86.bat
 ```
 
 # Browser Client
