@@ -2,23 +2,23 @@ openapi: 3.0.0
 info:
   description: >
     For the latest release information please check our [release notes](https://developer.myoperato.com/release_notes).
-    The Operato Fnb API exposes integrations endpoint and related functions.
-  version: 'unstable'
-  title: 'Operato Fnb'
-  termsOfService: 'https://myoperato.com/terms/'
+    The AIdoop R API exposes integrations endpoint and related functions.
+  version: "unstable"
+  title: "AIdoop R"
+  termsOfService: "https://myoperato.com/terms/"
   contact:
-    email: 'heartyoh@hatiolab.com'
+    email: "heartyoh@hatiolab.com"
   license:
     name: MIT
     url: http://mit-license.org/
 tags:
-  - name: 'operato-fnb'
-    description: 'API for read, create and update operato-fnbs'
+  - name: "aidoop-r-windows"
+    description: "API for read, create and update aidoop-r-windowss"
 schemes:
-  - 'https'
-  - 'http'
+  - "https"
+  - "http"
 servers:
-  - url: '/api/unstable'
+  - url: "/api/unstable"
 
 components:
   securitySchemes:
@@ -37,5 +37,5 @@ responses:
     description: Unauthorized
 
 externalDocs:
-  description: 'Find out about our release notes'
-  url: 'https://developer.myoperato.com/release_notes'
+  description: "Find out about our release notes"
+  url: "https://developer.myoperato.com/release_notes"

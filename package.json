@@ -1,5 +1,5 @@
 {
-  "name": "@things-factory/operato-fnb",
+  "name": "@things-factory/aidoop-r-windows",
   "version": "3.7.0",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
@@ -14,11 +14,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hatiolab/things-factory.git",
-    "directory": "packages/operato-fnb"
+    "directory": "packages/aidoop-r-windows"
   },
   "scripts": {
-    "serve": "things-factory operato-fnb",
-    "serve:dev": "npm run build:server && things-factory-dev operato-fnb",
+    "serve": "things-factory aidoop-r-windows",
+    "serve:dev": "npm run build:server && things-factory-dev aidoop-r-windows",
     "build": "tsc --p tsconfig.json",
     "build:client": "npm run clean:client && webpack --config node_modules/@things-factory/builder/webpack.config.js",
     "build:server": "npm run clean:server && tsc",
@@ -32,9 +32,9 @@
     "migration:run": "node node_modules/typeorm/cli.js migration:run",
     "migration:revert": "node node_modules/typeorm/cli.js migration:revert",
     "stop:dev": "kill $(lsof -t -i:3000,3001)",
-    "stop": "things-factory-stop operato-fnb",
-    "docker": "things-factory-dockerize hatiolab/operato-fnb:latest",
-    "docker:run": "docker run -it -p 4000:3000 hatiolab/operato-fnb:latest"
+    "stop": "things-factory-stop aidoop-r-windows",
+    "docker": "things-factory-dockerize hatiolab/aidoop-r-windows:latest",
+    "docker:run": "docker run -it -p 4000:3000 hatiolab/aidoop-r-windows:latest"
   },
   "dependencies": {
     "@aidoop/aidoop-r": "^3.7.0",

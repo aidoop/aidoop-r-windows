@@ -1,5 +1,5 @@
-# operato-fnb
-Operato F&B brand project for windows 
+# AIdoop-r Windows Installation
+aidoop-r project for windows 
 
 ## Command Guide
 
