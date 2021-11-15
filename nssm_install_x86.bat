@@ -1,3 +1,3 @@
-nssm install "operato-fnb" "C:\Program Files (x86)\operato-fnb\start.bat"
-nssm set "operato-fnb" AppDirectory C:\Program Files (x86)\operato-fnb
-nssm start "operato-fnb" 
+nssm install "aidoop-r" "C:\Program Files (x86)\aidoop-r\start.bat"
+nssm set "aidoop-r" AppDirectory C:\Program Files (x86)\aidoop-r
+nssm start "aidoop-r" 
