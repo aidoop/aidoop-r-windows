@@ -22,7 +22,7 @@ DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
-OutputBaseFilename=OperatoFnBSetup
+OutputBaseFilename=AIdoopRSetup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -40,10 +40,7 @@ Source: "D:\Documents\AIdoop\Windows Install Package\Git-2.33.0.2-64-bit.exe"; D
 [Run]
 Filename: "{src}\node-v14.17.6-x64.msi"; Description: "Install Node"; Verb: open; Flags: shellexec postinstall waituntilterminated runascurrentuser skipifsilent
 Filename: "{src}\yarn-1.22.15.msi"; Description: "Install Yarn"; Verb: open; Flags: shellexec postinstall waituntilterminated runascurrentuser skipifsilent
-Filename: "{src}\nssm_install_x64.bat"; Description: "X64 Install service"; \
-    Flags: nowait postinstall hidewizard runhidden runascurrentuser; 
-
-Filename: "{src}\nssm_install_x86.bat"; Description: "X86 Install service"; \
+Filename: "{src}\nssm_install.bat"; Description: "Install service"; \
     Flags: nowait postinstall hidewizard runhidden runascurrentuser; 
 
 

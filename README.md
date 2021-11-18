@@ -21,13 +21,8 @@ upgrade.bat
 ```
 
 ### Service Registration
-on x64 environment
 ```cmd
-nssm_install_x64.bat
-```
-on x86 environment
-```cmd
-nssm_install_x86.bat
+nssm_install.bat
 ```
 
 # Browser Client
