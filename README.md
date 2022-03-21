@@ -3,6 +3,9 @@ aidoop-r project for windows
 
 ## Command Guide
 
+**All commands should run with administrator's privilege.**
+
+
 ### Application Run
 
 ```cmd
